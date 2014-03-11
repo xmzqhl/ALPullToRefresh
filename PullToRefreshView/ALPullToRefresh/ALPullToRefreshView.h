@@ -14,6 +14,12 @@
 
 @property (nonatomic, assign) id<ALPullToRefreshViewDelegate>delegate;
 
+/**
+ @brief 初始化视图的唯一方式
+ @param frame 指定试图的位置，一般该试图的父视图为UIScrollView,大小和父视图一直，y为负数。
+ @param imageName 指定箭头所用图片的名称
+ @param color 指定文字的颜色
+ */
 - (id)initWithFrame:(CGRect)frame imageName:(NSString *)imageName textColor:(UIColor *)color;
 /**
  @brief 在加载完成的时候，主动调用该方法。

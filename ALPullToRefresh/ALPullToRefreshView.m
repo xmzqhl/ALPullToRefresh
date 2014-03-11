@@ -14,6 +14,8 @@
 #define AnimationDuration 0.18f
 #define LastPullingUpKey @"ALLastPullingUpTime"
 
+static CGFloat const kALPullSizeToRefresh = 65.0f;
+
 typedef NS_ENUM(NSInteger, ALPullState) {
     ALPullStateLoading,
     ALPullStateNormal,
@@ -194,7 +196,7 @@ typedef NS_ENUM(NSInteger, ALPullState) {
             isLoading = [_delegate ALPullToRefreshViewIsLoading:self];
         }
         if (!isLoading) {
-            if ((_style == ALPullViewStylePullDown && scrollView.contentOffset.y <= -65.0) || (_style == ALPullViewStylePullUp && scrollView.contentOffset.y >= (65.0 + scrollView.contentSize.height - scrollView.frame.size.height))) {
+            if ((_style == ALPullViewStylePullDown && scrollView.contentOffset.y <= - kALPullSizeToRefresh) || (_style == ALPullViewStylePullUp && scrollView.contentOffset.y >= (kALPullSizeToRefresh + scrollView.contentSize.height - scrollView.frame.size.height))) {
                 [self setStatePulling];
             } else {
                 [self setStateNormal];
@@ -209,14 +211,14 @@ typedef NS_ENUM(NSInteger, ALPullState) {
     if ([_delegate respondsToSelector:@selector(ALPullToRefreshViewIsLoading:)]) {
         isLoading = [_delegate ALPullToRefreshViewIsLoading:self];
     }
-    if ((_style == ALPullViewStylePullDown && scrollView.contentOffset.y < -65.0 && !isLoading) || (_style == ALPullViewStylePullUp && !isLoading && scrollView.contentOffset.y >= (65.0 + scrollView.contentSize.height - scrollView.frame.size.height) && !isLoading)) {
+    if ((_style == ALPullViewStylePullDown && scrollView.contentOffset.y < -kALPullSizeToRefresh && !isLoading) || (_style == ALPullViewStylePullUp && !isLoading && scrollView.contentOffset.y >= (kALPullSizeToRefresh + scrollView.contentSize.height - scrollView.frame.size.height) && !isLoading)) {
         [self setStateLoading];
         if ([_delegate respondsToSelector:@selector(ALPullToRefreshViewDidRefresh:)]) {
             [_delegate ALPullToRefreshViewDidRefresh:self];
         }
         [self setLastLoadingTime];
         [UIView animateWithDuration:0.3 animations:^{
-            scrollView.contentInset = (_style == ALPullViewStylePullDown) ? UIEdgeInsetsMake(65, 0, 0, 0) : UIEdgeInsetsMake(0, 0, 65, 0);
+            scrollView.contentInset = (_style == ALPullViewStylePullDown) ? UIEdgeInsetsMake(kALPullSizeToRefresh, 0, 0, 0) : UIEdgeInsetsMake(0, 0, kALPullSizeToRefresh, 0);
         } completion:^(BOOL finished) {
             
         }];

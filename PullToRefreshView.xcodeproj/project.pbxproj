@@ -19,11 +19,6 @@
 		21E1409F18CD8F1100EDCFD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E1408718CD8F1100EDCFD3 /* UIKit.framework */; };
 		21E140A718CD8F1100EDCFD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21E140A518CD8F1100EDCFD3 /* InfoPlist.strings */; };
 		21E140A918CD8F1100EDCFD3 /* PullToRefreshViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E140A818CD8F1100EDCFD3 /* PullToRefreshViewTests.m */; };
-		21E140B418CD8F1D00EDCFD3 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E140B318CD8F1D00EDCFD3 /* RootViewController.m */; };
-		21E140B818CD913200EDCFD3 /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E140B618CD913200EDCFD3 /* grayArrow.png */; };
-		21E140B918CD913200EDCFD3 /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E140B718CD913200EDCFD3 /* grayArrow@2x.png */; };
-		21E140BC18CD915400EDCFD3 /* ALPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E140BB18CD915400EDCFD3 /* ALPullToRefreshView.m */; };
-		21E140DC18CDD18300EDCFD3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E140DB18CDD18300EDCFD3 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,14 +48,6 @@
 		21E140A418CD8F1100EDCFD3 /* PullToRefreshViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PullToRefreshViewTests-Info.plist"; sourceTree = "<group>"; };
 		21E140A618CD8F1100EDCFD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		21E140A818CD8F1100EDCFD3 /* PullToRefreshViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PullToRefreshViewTests.m; sourceTree = "<group>"; };
-		21E140B218CD8F1D00EDCFD3 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		21E140B318CD8F1D00EDCFD3 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		21E140B618CD913200EDCFD3 /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayArrow.png; sourceTree = "<group>"; };
-		21E140B718CD913200EDCFD3 /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
-		21E140BA18CD915400EDCFD3 /* ALPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPullToRefreshView.h; sourceTree = "<group>"; };
-		21E140BB18CD915400EDCFD3 /* ALPullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPullToRefreshView.m; sourceTree = "<group>"; };
-		21E140DA18CDD18300EDCFD3 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		21E140DB18CDD18300EDCFD3 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +109,6 @@
 			children = (
 				21E1409218CD8F1100EDCFD3 /* AppDelegate.h */,
 				21E1409318CD8F1100EDCFD3 /* AppDelegate.m */,
-				21E140B218CD8F1D00EDCFD3 /* RootViewController.h */,
-				21E140B318CD8F1D00EDCFD3 /* RootViewController.m */,
-				21E140DA18CDD18300EDCFD3 /* SecondViewController.h */,
-				21E140DB18CDD18300EDCFD3 /* SecondViewController.m */,
-				21E140B518CD913200EDCFD3 /* ALPullToRefresh */,
 				21E1409518CD8F1100EDCFD3 /* Images.xcassets */,
 				21E1408A18CD8F1100EDCFD3 /* Supporting Files */,
 			);
@@ -160,17 +142,6 @@
 				21E140A518CD8F1100EDCFD3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		21E140B518CD913200EDCFD3 /* ALPullToRefresh */ = {
-			isa = PBXGroup;
-			children = (
-				21E140BA18CD915400EDCFD3 /* ALPullToRefreshView.h */,
-				21E140BB18CD915400EDCFD3 /* ALPullToRefreshView.m */,
-				21E140B618CD913200EDCFD3 /* grayArrow.png */,
-				21E140B718CD913200EDCFD3 /* grayArrow@2x.png */,
-			);
-			path = ALPullToRefresh;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,10 +219,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21E140B818CD913200EDCFD3 /* grayArrow.png in Resources */,
 				21E1408E18CD8F1100EDCFD3 /* InfoPlist.strings in Resources */,
 				21E1409618CD8F1100EDCFD3 /* Images.xcassets in Resources */,
-				21E140B918CD913200EDCFD3 /* grayArrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,9 +241,6 @@
 			files = (
 				21E1409418CD8F1100EDCFD3 /* AppDelegate.m in Sources */,
 				21E1409018CD8F1100EDCFD3 /* main.m in Sources */,
-				21E140B418CD8F1D00EDCFD3 /* RootViewController.m in Sources */,
-				21E140DC18CDD18300EDCFD3 /* SecondViewController.m in Sources */,
-				21E140BC18CD915400EDCFD3 /* ALPullToRefreshView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +364,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PullToRefreshView/PullToRefreshView-Prefix.pch";
 				INFOPLIST_FILE = "PullToRefreshView/PullToRefreshView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -412,7 +377,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PullToRefreshView/PullToRefreshView-Prefix.pch";
 				INFOPLIST_FILE = "PullToRefreshView/PullToRefreshView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

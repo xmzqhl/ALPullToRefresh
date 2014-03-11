@@ -13,7 +13,8 @@
 {
     NSMutableArray *_dataArray;
     BOOL _isLoading;
-    ALPullToRefreshView *_alRefreshView;
+    ALPullToRefreshView *_alPullDownView;
+    ALPullToRefreshView *_alPullUpView;
     UITableView *_tableView;
 }
 
@@ -62,6 +63,7 @@ NSInteger DeviceSystemVersion()
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    _tableView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
     _tableView.dataSource = self;
     _tableView.delegate = self;
     if (iOS_7) {
@@ -71,10 +73,15 @@ NSInteger DeviceSystemVersion()
     }
     
     [self.view addSubview:_tableView];
+    [_tableView reloadData];
     
-    _alRefreshView = [[ALPullToRefreshView alloc] initWithFrame:CGRectMake(0, -_tableView.frame.size.height, _tableView.frame.size.width, _tableView.frame.size.height) imageName:@"grayArrow.png" textColor:[UIColor blackColor]];
-    _alRefreshView.delegate = self;
-    [_tableView addSubview:_alRefreshView];
+    _alPullDownView = [[ALPullToRefreshView alloc] initWithFrame:CGRectMake(0, -_tableView.frame.size.height, _tableView.frame.size.width, _tableView.frame.size.height) imageName:@"grayArrow.png" textColor:[UIColor blackColor] viewStyle:ALPullViewStylePullDown];
+    _alPullDownView.delegate = self;
+    [_tableView addSubview:_alPullDownView];
+    
+    _alPullUpView = [[ALPullToRefreshView alloc] initWithFrame:CGRectMake(0, _tableView.contentSize.height, CGRectGetWidth(_tableView.frame), CGRectGetHeight(_tableView.frame)) imageName:@"grayArrow.png" textColor:nil viewStyle:ALPullViewStylePullUp];
+    _alPullUpView.delegate = self;
+    [_tableView addSubview:_alPullUpView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -102,12 +109,6 @@ NSInteger DeviceSystemVersion()
     return cell;
 }
 
-#pragma mark - UITableViewDelegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return;
-}
-
 #pragma mark - ALPullToRefreshViewDelegate
 - (BOOL)ALPullToRefreshViewIsLoading:(ALPullToRefreshView *)view
 {
@@ -123,24 +124,28 @@ NSInteger DeviceSystemVersion()
             NSString *str = [NSString stringWithFormat:@"这是第%drow", i];
             [_dataArray addObject:str];
         }
-        [NSThread sleepForTimeInterval:3];
+        [NSThread sleepForTimeInterval:5];
         dispatch_async(dispatch_get_main_queue(), ^{
             _isLoading = NO;
-            [_alRefreshView ALPullToRefreshViewDidFinishLoading:_tableView];
             [_tableView reloadData];
+            [_alPullDownView ALPullToRefreshViewDidFinishLoading:_tableView];
+            [_alPullUpView ALPullToRefreshViewDidFinishLoading:_tableView];
         });
     });
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    [_alRefreshView ALPullToRefreshViewDidScroll:scrollView];
+    [_alPullDownView ALPullToRefreshViewDidScroll:scrollView];
+    
+    [_alPullUpView ALPullToRefreshViewDidScroll:scrollView];
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    [_alRefreshView ALPullToRefreshViewDidEndDrag:scrollView];
+    [_alPullDownView ALPullToRefreshViewDidEndDrag:scrollView];
+    
+    [_alPullUpView ALPullToRefreshViewDidEndDrag:scrollView];
 }
-
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		214EF26418CF2F3B006D9959 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 214EF26618CF2F3B006D9959 /* Localizable.strings */; };
 		21D2C52E18CEE0C500767E3E /* ALPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D2C52718CEE0C500767E3E /* ALPullToRefreshView.m */; };
 		21D2C52F18CEE0C500767E3E /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D2C52818CEE0C500767E3E /* grayArrow.png */; };
 		21D2C53018CEE0C500767E3E /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D2C52918CEE0C500767E3E /* grayArrow@2x.png */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		214EF26518CF2F3B006D9959 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		214EF26718CF3077006D9959 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		21D2C52618CEE0C500767E3E /* ALPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPullToRefreshView.h; sourceTree = "<group>"; };
 		21D2C52718CEE0C500767E3E /* ALPullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPullToRefreshView.m; sourceTree = "<group>"; };
 		21D2C52818CEE0C500767E3E /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayArrow.png; sourceTree = "<group>"; };
@@ -137,6 +140,7 @@
 				21D2C52B18CEE0C500767E3E /* RootViewController.m */,
 				21D2C52C18CEE0C500767E3E /* SecondViewController.h */,
 				21D2C52D18CEE0C500767E3E /* SecondViewController.m */,
+				214EF26618CF2F3B006D9959 /* Localizable.strings */,
 				21D2C52518CEE0C500767E3E /* ALPullToRefresh */,
 				21E1409518CD8F1100EDCFD3 /* Images.xcassets */,
 				21E1408A18CD8F1100EDCFD3 /* Supporting Files */,
@@ -231,6 +235,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 			);
 			mainGroup = 21E1407718CD8F1100EDCFD3;
 			productRefGroup = 21E1408118CD8F1100EDCFD3 /* Products */;
@@ -248,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				214EF26418CF2F3B006D9959 /* Localizable.strings in Resources */,
 				21D2C52F18CEE0C500767E3E /* grayArrow.png in Resources */,
 				21E1408E18CD8F1100EDCFD3 /* InfoPlist.strings in Resources */,
 				21E1409618CD8F1100EDCFD3 /* Images.xcassets in Resources */,
@@ -297,6 +303,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		214EF26618CF2F3B006D9959 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				214EF26518CF2F3B006D9959 /* en */,
+				214EF26718CF3077006D9959 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		21E1408C18CD8F1100EDCFD3 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

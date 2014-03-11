@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  PullToRefreshView
+
+  Created by Arien Lau on 14-3-11.
+  Copyright (c) 2014年 Arien Lau. All rights reserved.
+*/
+
+"alStateLoading" = "Loading";
+"release to refresh" = "release to refresh";
+"pulling to release" = "pull up to release";
+"pull to refresh" = "pull down to refresh";

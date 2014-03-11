@@ -24,29 +24,9 @@
     return self;
 }
 
-- (void)setLastLoadingTime
-{
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
-    [formatter setDateStyle:NSDateFormatterMediumStyle];
-//    [formatter setAMSymbol:@"上午"];
-//    [formatter setPMSymbol:@"下午"];
-    //[formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'.000Z'"];
-//    [formatter setDateFormat:@"yyyy/MM/dd HH:mm"];
-    
-    NSString *loadingDate = [formatter stringFromDate:[NSDate date]];
-    NSLog(@"时间：%@", loadingDate);
-    
-//    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"ALLastUpdatedTime"];
-//    [[NSUserDefaults standardUserDefaults] synchronize];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    [self setLastLoadingTime];
-    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     button.frame = CGRectMake(50, 100, 70, 40);
     [button setTitle:@"push" forState:UIControlStateNormal];

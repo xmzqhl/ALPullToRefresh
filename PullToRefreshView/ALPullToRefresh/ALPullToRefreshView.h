@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, ALPullViewStyle) {
+    ALPullViewStylePullDown,//下拉刷新
+    ALPullViewStylePullUp,//上体更多
+};
+
 @protocol ALPullToRefreshViewDelegate;
 
 @interface ALPullToRefreshView : UIView
@@ -16,13 +21,17 @@
 
 /**
  @brief 初始化视图的唯一方式
- @param frame 指定试图的位置，一般该试图的父视图为UIScrollView,大小和父视图一直，y为负数。
+ @param frame 指定试图的位置，一般该试图的父视图为UIScrollView,大小和父视图一直，下拉刷新的y为负的scrollView.frame.size.height,上提更多的y为正数的scrollView.contentSize.height。
  @param imageName 指定箭头所用图片的名称
  @param color 指定文字的颜色
+ @param style 指定试图的风格，ALPullViewStylePullDown为下拉刷新，ALPullViewStylePullUp为上体更多。
  */
-- (id)initWithFrame:(CGRect)frame imageName:(NSString *)imageName textColor:(UIColor *)color;
+- (id)initWithFrame:(CGRect)frame
+          imageName:(NSString *)imageName
+          textColor:(UIColor *)color
+          viewStyle:(ALPullViewStyle)style;
 /**
- @brief 在加载完成的时候，主动调用该方法。
+ @brief 在加载完成的时候，在reloadData之后主动调用该方法。
  */
 - (void)ALPullToRefreshViewDidFinishLoading:(UIScrollView *)scrollView;
 

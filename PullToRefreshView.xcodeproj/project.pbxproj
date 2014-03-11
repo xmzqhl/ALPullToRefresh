@@ -133,11 +133,11 @@
 			children = (
 				21E1409218CD8F1100EDCFD3 /* AppDelegate.h */,
 				21E1409318CD8F1100EDCFD3 /* AppDelegate.m */,
-				21D2C52518CEE0C500767E3E /* ALPullToRefresh */,
 				21D2C52A18CEE0C500767E3E /* RootViewController.h */,
 				21D2C52B18CEE0C500767E3E /* RootViewController.m */,
 				21D2C52C18CEE0C500767E3E /* SecondViewController.h */,
 				21D2C52D18CEE0C500767E3E /* SecondViewController.m */,
+				21D2C52518CEE0C500767E3E /* ALPullToRefresh */,
 				21E1409518CD8F1100EDCFD3 /* Images.xcassets */,
 				21E1408A18CD8F1100EDCFD3 /* Supporting Files */,
 			);

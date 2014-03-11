@@ -70,8 +70,6 @@ typedef NS_ENUM(NSInteger, ALPullState) {
         [self addSubview:_indicator];
         
         _state = ALPullStateNormal;
-        UIScrollView *view = (UIScrollView *)self.superview;
-        view.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
         [self setStateNormal];
         
     }

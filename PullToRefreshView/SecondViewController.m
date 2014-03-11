@@ -48,15 +48,18 @@
 
 NSInteger DeviceSystemVersion()
 {
-    return [[[[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."] objectAtIndex:0] integerValue];
+    static NSInteger version;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        version = [[[[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."] objectAtIndex:0] integerValue];
+    });
+    return version;
 }
-
 #define iOS_7 (DeviceSystemVersion() >= 7)
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self.navigationController setNavigationBarHidden:YES];
 	// Do any additional setup after loading the view.
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _tableView.dataSource = self;
@@ -68,7 +71,6 @@ NSInteger DeviceSystemVersion()
     }
     
     [self.view addSubview:_tableView];
-    
     
     _alRefreshView = [[ALPullToRefreshView alloc] initWithFrame:CGRectMake(0, -_tableView.frame.size.height, _tableView.frame.size.width, _tableView.frame.size.height) imageName:@"grayArrow.png" textColor:[UIColor blackColor]];
     _alRefreshView.delegate = self;

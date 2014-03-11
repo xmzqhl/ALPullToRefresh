@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		214EF26418CF2F3B006D9959 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 214EF26618CF2F3B006D9959 /* Localizable.strings */; };
-		21D2C52E18CEE0C500767E3E /* ALPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D2C52718CEE0C500767E3E /* ALPullToRefreshView.m */; };
-		21D2C52F18CEE0C500767E3E /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D2C52818CEE0C500767E3E /* grayArrow.png */; };
-		21D2C53018CEE0C500767E3E /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D2C52918CEE0C500767E3E /* grayArrow@2x.png */; };
+		214EF26D18CF3550006D9959 /* ALPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214EF26A18CF3550006D9959 /* ALPullToRefreshView.m */; };
+		214EF26E18CF3550006D9959 /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 214EF26B18CF3550006D9959 /* grayArrow.png */; };
+		214EF26F18CF3550006D9959 /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 214EF26C18CF3550006D9959 /* grayArrow@2x.png */; };
 		21D2C53118CEE0C500767E3E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D2C52B18CEE0C500767E3E /* RootViewController.m */; };
 		21D2C53218CEE0C500767E3E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D2C52D18CEE0C500767E3E /* SecondViewController.m */; };
 		21E1408418CD8F1100EDCFD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E1408318CD8F1100EDCFD3 /* Foundation.framework */; };
@@ -38,12 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		214EF26518CF2F3B006D9959 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		214EF26718CF3077006D9959 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		21D2C52618CEE0C500767E3E /* ALPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPullToRefreshView.h; sourceTree = "<group>"; };
-		21D2C52718CEE0C500767E3E /* ALPullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPullToRefreshView.m; sourceTree = "<group>"; };
-		21D2C52818CEE0C500767E3E /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayArrow.png; sourceTree = "<group>"; };
-		21D2C52918CEE0C500767E3E /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
+		214EF26518CF2F3B006D9959 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		214EF26718CF3077006D9959 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		214EF26918CF3550006D9959 /* ALPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPullToRefreshView.h; sourceTree = "<group>"; };
+		214EF26A18CF3550006D9959 /* ALPullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPullToRefreshView.m; sourceTree = "<group>"; };
+		214EF26B18CF3550006D9959 /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayArrow.png; sourceTree = "<group>"; };
+		214EF26C18CF3550006D9959 /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
 		21D2C52A18CEE0C500767E3E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		21D2C52B18CEE0C500767E3E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		21D2C52C18CEE0C500767E3E /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -90,16 +90,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		21D2C52518CEE0C500767E3E /* ALPullToRefresh */ = {
+		214EF26818CF3550006D9959 /* ALPullToRefresh */ = {
 			isa = PBXGroup;
 			children = (
-				21D2C52618CEE0C500767E3E /* ALPullToRefreshView.h */,
-				21D2C52718CEE0C500767E3E /* ALPullToRefreshView.m */,
-				21D2C52818CEE0C500767E3E /* grayArrow.png */,
-				21D2C52918CEE0C500767E3E /* grayArrow@2x.png */,
+				214EF26918CF3550006D9959 /* ALPullToRefreshView.h */,
+				214EF26A18CF3550006D9959 /* ALPullToRefreshView.m */,
+				214EF26B18CF3550006D9959 /* grayArrow.png */,
+				214EF26C18CF3550006D9959 /* grayArrow@2x.png */,
 			);
 			path = ALPullToRefresh;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		21E1407718CD8F1100EDCFD3 = {
 			isa = PBXGroup;
@@ -140,8 +140,8 @@
 				21D2C52B18CEE0C500767E3E /* RootViewController.m */,
 				21D2C52C18CEE0C500767E3E /* SecondViewController.h */,
 				21D2C52D18CEE0C500767E3E /* SecondViewController.m */,
+				214EF26818CF3550006D9959 /* ALPullToRefresh */,
 				214EF26618CF2F3B006D9959 /* Localizable.strings */,
-				21D2C52518CEE0C500767E3E /* ALPullToRefresh */,
 				21E1409518CD8F1100EDCFD3 /* Images.xcassets */,
 				21E1408A18CD8F1100EDCFD3 /* Supporting Files */,
 			);
@@ -254,10 +254,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				214EF26418CF2F3B006D9959 /* Localizable.strings in Resources */,
-				21D2C52F18CEE0C500767E3E /* grayArrow.png in Resources */,
 				21E1408E18CD8F1100EDCFD3 /* InfoPlist.strings in Resources */,
+				214EF26E18CF3550006D9959 /* grayArrow.png in Resources */,
+				214EF26F18CF3550006D9959 /* grayArrow@2x.png in Resources */,
 				21E1409618CD8F1100EDCFD3 /* Images.xcassets in Resources */,
-				21D2C53018CEE0C500767E3E /* grayArrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,9 +278,9 @@
 			files = (
 				21D2C53218CEE0C500767E3E /* SecondViewController.m in Sources */,
 				21E1409418CD8F1100EDCFD3 /* AppDelegate.m in Sources */,
+				214EF26D18CF3550006D9959 /* ALPullToRefreshView.m in Sources */,
 				21E1409018CD8F1100EDCFD3 /* main.m in Sources */,
 				21D2C53118CEE0C500767E3E /* RootViewController.m in Sources */,
-				21D2C52E18CEE0C500767E3E /* ALPullToRefreshView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

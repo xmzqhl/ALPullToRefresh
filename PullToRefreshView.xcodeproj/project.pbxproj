@@ -364,6 +364,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PullToRefreshView/PullToRefreshView-Prefix.pch";
 				INFOPLIST_FILE = "PullToRefreshView/PullToRefreshView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -377,6 +378,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PullToRefreshView/PullToRefreshView-Prefix.pch";
 				INFOPLIST_FILE = "PullToRefreshView/PullToRefreshView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -443,6 +445,7 @@
 				21E140AE18CD8F1100EDCFD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21E140AF18CD8F1100EDCFD3 /* Build configuration list for PBXNativeTarget "PullToRefreshViewTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +454,7 @@
 				21E140B118CD8F1100EDCFD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

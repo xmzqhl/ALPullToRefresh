@@ -119,9 +119,8 @@ NSInteger DeviceSystemVersion()
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         _isLoading = YES;
-        int num = _dataArray.count;
-        for (int i = num; i < 10 + num; i ++) {
-            NSString *str = [NSString stringWithFormat:@"这是第%drow", i];
+        for (NSUInteger i = _dataArray.count; i < 10 + _dataArray.count; i ++) {
+            NSString *str = [NSString stringWithFormat:@"这是第%udrow", i];
             [_dataArray addObject:str];
         }
         [NSThread sleepForTimeInterval:5];

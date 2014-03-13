@@ -83,7 +83,6 @@ typedef NS_ENUM(NSInteger, ALPullState) {
         
         _state = ALPullStateNormal;
         [self setStateNormal];
-        
     }
     return self;
 }

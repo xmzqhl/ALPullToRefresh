@@ -33,17 +33,17 @@ typedef NS_ENUM(NSInteger, ALPullViewStyle) {
 /**
  @brief 在加载完成的时候，在reloadData之后主动调用该方法。
  */
-- (void)ALPullToRefreshViewDidFinishLoading:(UIScrollView *)scrollView;
+- (void)ALPullToRefreshViewDidFinishLoading:(UIScrollView *)scrollView NS_AVAILABLE_IOS(5_0);
 
 /**
  @brief 实现UIScrollView的scrollViewDidScroll:方法，来主动调用该函数
  */
-- (void)ALPullToRefreshViewDidScroll:(UIScrollView *)scrollView;
+- (void)ALPullToRefreshViewDidScroll:(UIScrollView *)scrollView NS_AVAILABLE_IOS(5_0);
 
 /**
  @brief 实现UIScrollView的scrollViewDidEndDragging: willDecelerate:方法来调用此方法，通知试图用户手指已经离开屏幕
  */
-- (void)ALPullToRefreshViewDidEndDrag:(UIScrollView *)scrollView;
+- (void)ALPullToRefreshViewDidEndDrag:(UIScrollView *)scrollView NS_AVAILABLE_IOS(5_0);
 @end
 
 

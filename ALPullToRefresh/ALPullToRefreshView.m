@@ -113,7 +113,7 @@ typedef NS_ENUM(NSInteger, ALPullState) {
         {
             _statusLabel.text = NSLocalizedString(@"alStateLoading", @"");
             [_indicator startAnimating];
-            //如果直接hidden，效果不好，会有影像残留，这样子是瞬间消失。
+            //如果直接hidden，效果不好，会有影像残留，这样子会瞬间消失。
             [CATransaction begin];
             [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
             _arrowImage.hidden = YES;
@@ -238,4 +238,5 @@ typedef NS_ENUM(NSInteger, ALPullState) {
     [[NSUserDefaults standardUserDefaults] setObject:loadingDate forKey:(_style == ALPullViewStylePullDown) ? LastPullDownKey : LastPullingUpKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
+
 @end

@@ -10,7 +10,7 @@
 
 typedef NS_ENUM(NSInteger, ALPullViewStyle) {
     ALPullViewStylePullDown,//下拉刷新
-    ALPullViewStylePullUp,//上体更多
+    ALPullViewStylePullUp,//上提更多
 };
 
 @protocol ALPullToRefreshViewDelegate;
@@ -41,7 +41,7 @@ typedef NS_ENUM(NSInteger, ALPullViewStyle) {
 - (void)ALPullToRefreshViewDidScroll:(UIScrollView *)scrollView NS_AVAILABLE_IOS(5_0);
 
 /**
- @brief 实现UIScrollView的scrollViewDidEndDragging: willDecelerate:方法来调用此方法，通知试图用户手指已经离开屏幕
+ @brief 实现UIScrollView的scrollViewDidEndDragging:willDecelerate:方法来调用此方法，通知试图用户手指已经离开屏幕
  */
 - (void)ALPullToRefreshViewDidEndDrag:(UIScrollView *)scrollView NS_AVAILABLE_IOS(5_0);
 @end

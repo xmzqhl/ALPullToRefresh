@@ -48,6 +48,7 @@ typedef NS_ENUM(NSInteger, ALPullState) {
         if(_style ==  ALPullViewStylePullDown) {
             self.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin;
         } else if (_style == ALPullViewStylePullUp) {
+
         }
         _statusLabel = [[UILabel alloc] init];
         if (_style == ALPullViewStylePullUp) {
@@ -196,7 +197,7 @@ typedef NS_ENUM(NSInteger, ALPullState) {
         }
         if (!isLoading) {
             if ((_style == ALPullViewStylePullDown && scrollView.contentOffset.y <= - kALPullSizeToRefresh) || (_style == ALPullViewStylePullUp && scrollView.contentOffset.y >= (kALPullSizeToRefresh + scrollView.contentSize.height - scrollView.frame.size.height))) {
-                [self setStatePulling];
+                    [self setStatePulling];
             } else {
                 [self setStateNormal];
             }
@@ -217,7 +218,10 @@ typedef NS_ENUM(NSInteger, ALPullState) {
         }
         [self setLastLoadingTime];
         [UIView animateWithDuration:0.3 animations:^{
-            scrollView.contentInset = (_style == ALPullViewStylePullDown) ? UIEdgeInsetsMake(kALPullSizeToRefresh, 0, 0, 0) : UIEdgeInsetsMake(0, 0, kALPullSizeToRefresh, 0);
+            //以下两个变量是为了防止内容过少时候，contentSize小于scrollView的大小的情况。
+            CGFloat spaceToBottom = scrollView.bounds.size.height - scrollView.contentSize.height;
+            BOOL flag = spaceToBottom > 0 ? YES : NO;
+            scrollView.contentInset = (_style == ALPullViewStylePullDown) ? UIEdgeInsetsMake(kALPullSizeToRefresh, 0, 0, 0) : UIEdgeInsetsMake(0, 0, flag ? (kALPullSizeToRefresh + spaceToBottom) : kALPullSizeToRefresh, 0);
         } completion:^(BOOL finished) {
             
         }];
@@ -237,6 +241,30 @@ typedef NS_ENUM(NSInteger, ALPullState) {
     loadingDate = [NSString stringWithFormat:@"%@", loadingDate];
     [[NSUserDefaults standardUserDefaults] setObject:loadingDate forKey:(_style == ALPullViewStylePullDown) ? LastPullDownKey : LastPullingUpKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)willMoveToSuperview:(UIView *)newSuperview
+{
+    if (_style == ALPullViewStylePullUp) {
+        if ([newSuperview isKindOfClass:[UIScrollView class]]) {
+            UIScrollView *scrollView = (UIScrollView *)newSuperview;
+            if (CGRectGetHeight(scrollView.bounds) > scrollView.contentSize.height) {
+                self.frame = CGRectMake(0, CGRectGetHeight(scrollView.bounds), CGRectGetWidth(scrollView.frame), CGRectGetHeight(scrollView.frame));
+            }
+        }
+    }
+}
+
+- (void)layoutSubviews
+{
+    if (_style == ALPullViewStylePullUp) {
+        if ([self.superview isKindOfClass:[UIScrollView class]]) {
+            UIScrollView *scrollView = (UIScrollView *)self.superview;
+            if (CGRectGetHeight(scrollView.bounds) > scrollView.contentSize.height) {
+                self.frame = CGRectMake(0, CGRectGetHeight(scrollView.bounds), CGRectGetWidth(scrollView.frame), CGRectGetHeight(scrollView.frame));
+            }
+        }
+    }
 }
 
 @end

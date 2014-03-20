@@ -39,7 +39,7 @@
     self = [super init];
     if (self) {
         _dataArray = [NSMutableArray arrayWithCapacity:10];
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 15; i++) {
             [_dataArray addObject:[NSString stringWithFormat:@"This is %d rows", i]];
         }
         _isLoading = NO;
@@ -90,6 +90,11 @@ NSInteger DeviceSystemVersion()
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+}
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -119,7 +124,8 @@ NSInteger DeviceSystemVersion()
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         _isLoading = YES;
-        for (NSUInteger i = _dataArray.count; i < 10 + _dataArray.count; i ++) {
+        NSUInteger num = _dataArray.count;
+        for (NSUInteger i = num; i < 10 + num; i++) {
             NSString *str = [NSString stringWithFormat:@"这是第%udrow", i];
             [_dataArray addObject:str];
         }

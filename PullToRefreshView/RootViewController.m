@@ -9,6 +9,9 @@
 #import "RootViewController.h"
 #import "SecondViewController.h"
 
+CGFloat const kButtonWidth = 70.0f;
+CGFloat const kButtonHeight = 40.0f;
+
 @interface RootViewController ()
 
 @end
@@ -28,7 +31,7 @@
 {
     [super viewDidLoad];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    button.frame = CGRectMake(50, 100, 70, 40);
+    button.frame = CGRectMake((CGRectGetWidth(self.view.frame) - kButtonWidth) / 2.0, (CGRectGetHeight(self.view.frame) - kButtonHeight) / 2.0, kButtonWidth, kButtonHeight);
     [button setTitle:@"push" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(buttonTaped) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];

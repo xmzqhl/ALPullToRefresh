@@ -7,12 +7,15 @@
 //
 
 #import "ALPullToRefreshView.h"
+#if !__has_feature(objc_arc)
+    #error This file must be compiled with ARC.Use -fobjc-arc flag (or convert project to ARC)
+#endif
 
 #define RGB_Color(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 #define LastPullDownKey @"ALLastPullDownTime"
-#define AnimationDuration 0.18f
 #define LastPullingUpKey @"ALLastPullingUpTime"
+#define AnimationDuration 0.18f
 
 static CGFloat const kALPullSizeToRefresh = 65.0f;
 
@@ -245,24 +248,20 @@ typedef NS_ENUM(NSInteger, ALPullState) {
 
 - (void)willMoveToSuperview:(UIView *)newSuperview
 {
-    if (_style == ALPullViewStylePullUp) {
-        if ([newSuperview isKindOfClass:[UIScrollView class]]) {
-            UIScrollView *scrollView = (UIScrollView *)newSuperview;
-            if (CGRectGetHeight(scrollView.bounds) > scrollView.contentSize.height) {
-                self.frame = CGRectMake(0, CGRectGetHeight(scrollView.bounds), CGRectGetWidth(scrollView.frame), CGRectGetHeight(scrollView.frame));
-            }
+    if (_style == ALPullViewStylePullUp && [newSuperview isKindOfClass:[UIScrollView class]]) {
+        UIScrollView *scrollView = (UIScrollView *)newSuperview;
+        if (CGRectGetHeight(scrollView.bounds) > scrollView.contentSize.height) {
+            self.frame = CGRectMake(0, CGRectGetHeight(scrollView.bounds), CGRectGetWidth(scrollView.frame), CGRectGetHeight(scrollView.frame));
         }
     }
 }
 
 - (void)layoutSubviews
 {
-    if (_style == ALPullViewStylePullUp) {
-        if ([self.superview isKindOfClass:[UIScrollView class]]) {
-            UIScrollView *scrollView = (UIScrollView *)self.superview;
-            if (CGRectGetHeight(scrollView.bounds) > scrollView.contentSize.height) {
-                self.frame = CGRectMake(0, CGRectGetHeight(scrollView.bounds), CGRectGetWidth(scrollView.frame), CGRectGetHeight(scrollView.frame));
-            }
+    if (_style == ALPullViewStylePullUp && [self.superview isKindOfClass:[UIScrollView class]]) {
+        UIScrollView *scrollView = (UIScrollView *)self.superview;
+        if (CGRectGetHeight(scrollView.bounds) > scrollView.contentSize.height) {
+            self.frame = CGRectMake(0, CGRectGetHeight(scrollView.bounds), CGRectGetWidth(scrollView.frame), CGRectGetHeight(scrollView.frame));
         }
     }
 }

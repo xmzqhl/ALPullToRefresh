@@ -69,7 +69,7 @@ NSInteger DeviceSystemVersion()
     if (iOS_7) {
         self.automaticallyAdjustsScrollViewInsets = NO;
         _tableView.frame = CGRectMake(0, 64, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - 64);
-        _tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        _tableView.contentInset = UIEdgeInsetsZero;
     }
     
     [self.view addSubview:_tableView];
@@ -122,7 +122,7 @@ NSInteger DeviceSystemVersion()
         _isLoading = YES;
         NSUInteger num = _dataArray.count;
         for (NSUInteger i = num; i < 10 + num; i++) {
-            NSString *str = [NSString stringWithFormat:@"这是第%udrow", i];
+            NSString *str = [NSString stringWithFormat:@"这是第%urow", i];
             [_dataArray addObject:str];
         }
         [NSThread sleepForTimeInterval:5];

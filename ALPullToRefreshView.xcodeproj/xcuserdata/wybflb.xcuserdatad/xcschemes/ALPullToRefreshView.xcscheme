@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "21E1407F18CD8F1100EDCFD3"
-               BuildableName = "PullToRefreshView.app"
-               BlueprintName = "PullToRefreshView"
-               ReferencedContainer = "container:PullToRefreshView.xcodeproj">
+               BuildableName = "ALPullToRefreshView.app"
+               BlueprintName = "ALPullToRefreshView"
+               ReferencedContainer = "container:ALPullToRefreshView.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "21E1409A18CD8F1100EDCFD3"
-               BuildableName = "PullToRefreshViewTests.xctest"
-               BlueprintName = "PullToRefreshViewTests"
-               ReferencedContainer = "container:PullToRefreshView.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "21E1407F18CD8F1100EDCFD3"
-            BuildableName = "PullToRefreshView.app"
-            BlueprintName = "PullToRefreshView"
-            ReferencedContainer = "container:PullToRefreshView.xcodeproj">
+            BuildableName = "ALPullToRefreshView.app"
+            BlueprintName = "ALPullToRefreshView"
+            ReferencedContainer = "container:ALPullToRefreshView.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "21E1407F18CD8F1100EDCFD3"
-            BuildableName = "PullToRefreshView.app"
-            BlueprintName = "PullToRefreshView"
-            ReferencedContainer = "container:PullToRefreshView.xcodeproj">
+            BuildableName = "ALPullToRefreshView.app"
+            BlueprintName = "ALPullToRefreshView"
+            ReferencedContainer = "container:ALPullToRefreshView.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "21E1407F18CD8F1100EDCFD3"
-            BuildableName = "PullToRefreshView.app"
-            BlueprintName = "PullToRefreshView"
-            ReferencedContainer = "container:PullToRefreshView.xcodeproj">
+            BuildableName = "ALPullToRefreshView.app"
+            BlueprintName = "ALPullToRefreshView"
+            ReferencedContainer = "container:ALPullToRefreshView.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

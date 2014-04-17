@@ -122,7 +122,11 @@ NSInteger DeviceSystemVersion()
         _isLoading = YES;
         NSUInteger num = _dataArray.count;
         for (NSUInteger i = num; i < 10 + num; i++) {
+#if __LP64__
+            NSString *str = [NSString stringWithFormat:@"这是第%lurow", i];
+#else
             NSString *str = [NSString stringWithFormat:@"这是第%urow", i];
+#endif
             [_dataArray addObject:str];
         }
         [NSThread sleepForTimeInterval:5];

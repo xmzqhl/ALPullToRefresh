@@ -214,7 +214,7 @@ typedef NS_ENUM(NSInteger, ALPullState) {
     if ([_delegate respondsToSelector:@selector(ALPullToRefreshViewIsLoading:)]) {
         isLoading = [_delegate ALPullToRefreshViewIsLoading:self];
     }
-    if ((_style == ALPullViewStylePullDown && scrollView.contentOffset.y < -kALPullSizeToRefresh && !isLoading) || (_style == ALPullViewStylePullUp && !isLoading && scrollView.contentOffset.y >= (kALPullSizeToRefresh + scrollView.contentSize.height - scrollView.frame.size.height) && !isLoading)) {
+    if ((_style == ALPullViewStylePullDown && scrollView.contentOffset.y < -kALPullSizeToRefresh && !isLoading) || (_style == ALPullViewStylePullUp && !isLoading && scrollView.contentOffset.y >= (kALPullSizeToRefresh + scrollView.contentSize.height - CGRectGetHeight(scrollView.bounds)))) {
         [self setStateLoading];
         if ([_delegate respondsToSelector:@selector(ALPullToRefreshViewDidRefresh:)]) {
             [_delegate ALPullToRefreshViewDidRefresh:self];

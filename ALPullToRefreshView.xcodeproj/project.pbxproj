@@ -48,20 +48,20 @@
 		21D2C52B18CEE0C500767E3E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		21D2C52C18CEE0C500767E3E /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		21D2C52D18CEE0C500767E3E /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		21E1408018CD8F1100EDCFD3 /* PullToRefreshView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PullToRefreshView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21E1408018CD8F1100EDCFD3 /* ALPullToRefreshView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALPullToRefreshView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E1408318CD8F1100EDCFD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		21E1408518CD8F1100EDCFD3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		21E1408718CD8F1100EDCFD3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		21E1408B18CD8F1100EDCFD3 /* PullToRefreshView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PullToRefreshView-Info.plist"; sourceTree = "<group>"; };
+		21E1408B18CD8F1100EDCFD3 /* ALPullToRefreshView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ALPullToRefreshView-Info.plist"; sourceTree = "<group>"; };
 		21E1408D18CD8F1100EDCFD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		21E1408F18CD8F1100EDCFD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		21E1409118CD8F1100EDCFD3 /* PullToRefreshView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PullToRefreshView-Prefix.pch"; sourceTree = "<group>"; };
+		21E1409118CD8F1100EDCFD3 /* ALPullToRefreshView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ALPullToRefreshView-Prefix.pch"; sourceTree = "<group>"; };
 		21E1409218CD8F1100EDCFD3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		21E1409318CD8F1100EDCFD3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		21E1409518CD8F1100EDCFD3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		21E1409B18CD8F1100EDCFD3 /* PullToRefreshViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PullToRefreshViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21E1409B18CD8F1100EDCFD3 /* ALPullToRefreshViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALPullToRefreshViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E1409C18CD8F1100EDCFD3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		21E140A418CD8F1100EDCFD3 /* PullToRefreshViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PullToRefreshViewTests-Info.plist"; sourceTree = "<group>"; };
+		21E140A418CD8F1100EDCFD3 /* ALPullToRefreshViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ALPullToRefreshViewTests-Info.plist"; sourceTree = "<group>"; };
 		21E140A618CD8F1100EDCFD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		21E140A818CD8F1100EDCFD3 /* PullToRefreshViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PullToRefreshViewTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,8 +114,8 @@
 		21E1408118CD8F1100EDCFD3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				21E1408018CD8F1100EDCFD3 /* PullToRefreshView.app */,
-				21E1409B18CD8F1100EDCFD3 /* PullToRefreshViewTests.xctest */,
+				21E1408018CD8F1100EDCFD3 /* ALPullToRefreshView.app */,
+				21E1409B18CD8F1100EDCFD3 /* ALPullToRefreshViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,10 +151,10 @@
 		21E1408A18CD8F1100EDCFD3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				21E1408B18CD8F1100EDCFD3 /* PullToRefreshView-Info.plist */,
+				21E1408B18CD8F1100EDCFD3 /* ALPullToRefreshView-Info.plist */,
 				21E1408C18CD8F1100EDCFD3 /* InfoPlist.strings */,
 				21E1408F18CD8F1100EDCFD3 /* main.m */,
-				21E1409118CD8F1100EDCFD3 /* PullToRefreshView-Prefix.pch */,
+				21E1409118CD8F1100EDCFD3 /* ALPullToRefreshView-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -171,7 +171,7 @@
 		21E140A318CD8F1100EDCFD3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				21E140A418CD8F1100EDCFD3 /* PullToRefreshViewTests-Info.plist */,
+				21E140A418CD8F1100EDCFD3 /* ALPullToRefreshViewTests-Info.plist */,
 				21E140A518CD8F1100EDCFD3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -180,9 +180,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		21E1407F18CD8F1100EDCFD3 /* PullToRefreshView */ = {
+		21E1407F18CD8F1100EDCFD3 /* ALPullToRefreshView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21E140AC18CD8F1100EDCFD3 /* Build configuration list for PBXNativeTarget "PullToRefreshView" */;
+			buildConfigurationList = 21E140AC18CD8F1100EDCFD3 /* Build configuration list for PBXNativeTarget "ALPullToRefreshView" */;
 			buildPhases = (
 				21E1407C18CD8F1100EDCFD3 /* Sources */,
 				21E1407D18CD8F1100EDCFD3 /* Frameworks */,
@@ -192,14 +192,14 @@
 			);
 			dependencies = (
 			);
-			name = PullToRefreshView;
+			name = ALPullToRefreshView;
 			productName = PullToRefreshView;
-			productReference = 21E1408018CD8F1100EDCFD3 /* PullToRefreshView.app */;
+			productReference = 21E1408018CD8F1100EDCFD3 /* ALPullToRefreshView.app */;
 			productType = "com.apple.product-type.application";
 		};
-		21E1409A18CD8F1100EDCFD3 /* PullToRefreshViewTests */ = {
+		21E1409A18CD8F1100EDCFD3 /* ALPullToRefreshViewTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21E140AF18CD8F1100EDCFD3 /* Build configuration list for PBXNativeTarget "PullToRefreshViewTests" */;
+			buildConfigurationList = 21E140AF18CD8F1100EDCFD3 /* Build configuration list for PBXNativeTarget "ALPullToRefreshViewTests" */;
 			buildPhases = (
 				21E1409718CD8F1100EDCFD3 /* Sources */,
 				21E1409818CD8F1100EDCFD3 /* Frameworks */,
@@ -210,9 +210,9 @@
 			dependencies = (
 				21E140A118CD8F1100EDCFD3 /* PBXTargetDependency */,
 			);
-			name = PullToRefreshViewTests;
+			name = ALPullToRefreshViewTests;
 			productName = PullToRefreshViewTests;
-			productReference = 21E1409B18CD8F1100EDCFD3 /* PullToRefreshViewTests.xctest */;
+			productReference = 21E1409B18CD8F1100EDCFD3 /* ALPullToRefreshViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -232,7 +232,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 21E1407B18CD8F1100EDCFD3 /* Build configuration list for PBXProject "PullToRefreshView" */;
+			buildConfigurationList = 21E1407B18CD8F1100EDCFD3 /* Build configuration list for PBXProject "ALPullToRefreshView" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -245,8 +245,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				21E1407F18CD8F1100EDCFD3 /* PullToRefreshView */,
-				21E1409A18CD8F1100EDCFD3 /* PullToRefreshViewTests */,
+				21E1407F18CD8F1100EDCFD3 /* ALPullToRefreshView */,
+				21E1409A18CD8F1100EDCFD3 /* ALPullToRefreshViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -300,7 +300,7 @@
 /* Begin PBXTargetDependency section */
 		21E140A118CD8F1100EDCFD3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 21E1407F18CD8F1100EDCFD3 /* PullToRefreshView */;
+			target = 21E1407F18CD8F1100EDCFD3 /* ALPullToRefreshView */;
 			targetProxy = 21E140A018CD8F1100EDCFD3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -415,10 +415,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PullToRefreshView/PullToRefreshView-Prefix.pch";
-				INFOPLIST_FILE = "PullToRefreshView/PullToRefreshView-Info.plist";
+				GCC_PREFIX_HEADER = "PullToRefreshView/ALPullToRefreshView-Prefix.pch";
+				INFOPLIST_FILE = "PullToRefreshView/ALPullToRefreshView-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ALPullToRefreshView;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -433,10 +433,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PullToRefreshView/PullToRefreshView-Prefix.pch";
-				INFOPLIST_FILE = "PullToRefreshView/PullToRefreshView-Info.plist";
+				GCC_PREFIX_HEADER = "PullToRefreshView/ALPullToRefreshView-Prefix.pch";
+				INFOPLIST_FILE = "PullToRefreshView/ALPullToRefreshView-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ALPullToRefreshView;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -457,8 +457,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "PullToRefreshViewTests/PullToRefreshViewTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "PullToRefreshViewTests/ALPullToRefreshViewTests-Info.plist";
+				PRODUCT_NAME = ALPullToRefreshViewTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -475,8 +475,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PullToRefreshView/PullToRefreshView-Prefix.pch";
-				INFOPLIST_FILE = "PullToRefreshViewTests/PullToRefreshViewTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "PullToRefreshViewTests/ALPullToRefreshViewTests-Info.plist";
+				PRODUCT_NAME = ALPullToRefreshViewTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -485,7 +485,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		21E1407B18CD8F1100EDCFD3 /* Build configuration list for PBXProject "PullToRefreshView" */ = {
+		21E1407B18CD8F1100EDCFD3 /* Build configuration list for PBXProject "ALPullToRefreshView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21E140AA18CD8F1100EDCFD3 /* Debug */,
@@ -494,7 +494,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21E140AC18CD8F1100EDCFD3 /* Build configuration list for PBXNativeTarget "PullToRefreshView" */ = {
+		21E140AC18CD8F1100EDCFD3 /* Build configuration list for PBXNativeTarget "ALPullToRefreshView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21E140AD18CD8F1100EDCFD3 /* Debug */,
@@ -503,7 +503,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21E140AF18CD8F1100EDCFD3 /* Build configuration list for PBXNativeTarget "PullToRefreshViewTests" */ = {
+		21E140AF18CD8F1100EDCFD3 /* Build configuration list for PBXNativeTarget "ALPullToRefreshViewTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21E140B018CD8F1100EDCFD3 /* Debug */,

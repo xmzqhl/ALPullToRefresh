@@ -9,21 +9,22 @@
 #import "SecondViewController.h"
 #import "ALPullToRefreshView.h"
 
-@interface SecondViewController ()<UITableViewDataSource, UITableViewDelegate, ALPullToRefreshViewDelegate>
+@interface SecondViewController () <UITableViewDataSource, UITableViewDelegate, ALPullToRefreshViewDelegate>
 {
     NSMutableArray *_dataArray;
     BOOL _isLoading;
-    ALPullToRefreshView *_alPullDownView;
-    ALPullToRefreshView *_alPullUpView;
+    ALPullToRefreshView *_ALPullDownView;
+    ALPullToRefreshView *_ALPullUpView;
     UITableView *_tableView;
 }
 
 @end
 
 @implementation SecondViewController
-- (void)dealloc {
-    NSLog(@"%s", __FUNCTION__);
-}
+
+//- (void)dealloc {
+//    NSLog(@"%s", __FUNCTION__);
+//}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -75,13 +76,13 @@ NSInteger DeviceSystemVersion()
     [self.view addSubview:_tableView];
     [_tableView reloadData];
     
-    _alPullDownView = [[ALPullToRefreshView alloc] initWithFrame:CGRectMake(0, -_tableView.frame.size.height, _tableView.frame.size.width, _tableView.frame.size.height) imageName:@"grayArrow.png" textColor:[UIColor blackColor] viewStyle:ALPullViewStylePullDown];
-    _alPullDownView.delegate = self;
-    [_tableView addSubview:_alPullDownView];
+    _ALPullDownView = [[ALPullToRefreshView alloc] initWithFrame:CGRectMake(0, -_tableView.frame.size.height, _tableView.frame.size.width, _tableView.frame.size.height) imageName:@"grayArrow.png" textColor:[UIColor blackColor] viewStyle:ALPullViewStylePullDown];
+    _ALPullDownView.delegate = self;
+    [_tableView addSubview:_ALPullDownView];
     
-    _alPullUpView = [[ALPullToRefreshView alloc] initWithFrame:CGRectMake(0, _tableView.contentSize.height, CGRectGetWidth(_tableView.frame), CGRectGetHeight(_tableView.frame)) imageName:@"grayArrow.png" textColor:nil viewStyle:ALPullViewStylePullUp];
-    _alPullUpView.delegate = self;
-    [_tableView addSubview:_alPullUpView];
+    _ALPullUpView = [[ALPullToRefreshView alloc] initWithFrame:CGRectMake(0, _tableView.contentSize.height, CGRectGetWidth(_tableView.frame), CGRectGetHeight(_tableView.frame)) imageName:@"grayArrow.png" textColor:nil viewStyle:ALPullViewStylePullUp];
+    _ALPullUpView.delegate = self;
+    [_tableView addSubview:_ALPullUpView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -133,24 +134,24 @@ NSInteger DeviceSystemVersion()
         dispatch_async(dispatch_get_main_queue(), ^{
             _isLoading = NO;
             [_tableView reloadData];
-            [_alPullDownView ALPullToRefreshViewDidFinishLoading:_tableView];
-            [_alPullUpView ALPullToRefreshViewDidFinishLoading:_tableView];
+            [_ALPullDownView ALPullToRefreshViewDidFinishLoading:_tableView];
+            [_ALPullUpView ALPullToRefreshViewDidFinishLoading:_tableView];
         });
     });
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    [_alPullDownView ALPullToRefreshViewDidScroll:scrollView];
+    [_ALPullDownView ALPullToRefreshViewDidScroll:scrollView];
     
-    [_alPullUpView ALPullToRefreshViewDidScroll:scrollView];
+    [_ALPullUpView ALPullToRefreshViewDidScroll:scrollView];
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    [_alPullDownView ALPullToRefreshViewDidEndDrag:scrollView];
+    [_ALPullDownView ALPullToRefreshViewDidEndDrag:scrollView];
     
-    [_alPullUpView ALPullToRefreshViewDidEndDrag:scrollView];
+    [_ALPullUpView ALPullToRefreshViewDidEndDrag:scrollView];
 }
 
 @end

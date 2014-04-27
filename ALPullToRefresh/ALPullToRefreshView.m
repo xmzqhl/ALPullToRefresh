@@ -13,9 +13,9 @@
 
 #define RGB_Color(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
-#define LastPullDownKey @"ALLastPullDownTime"
-#define LastPullingUpKey @"ALLastPullingUpTime"
-#define AnimationDuration 0.18f
+#define kLastPullDownKey @"ALLastPullDownTime"
+#define kLastPullingUpKey @"ALLastPullingUpTime"
+#define kAnimationDuration 0.18f
 
 static CGFloat const kALPullSizeToRefresh = 65.0f;
 
@@ -98,7 +98,7 @@ typedef NS_ENUM(NSInteger, ALPullState) {
         {
             if (_state == ALPullStatePulling) {
                 [CATransaction begin];
-                [CATransaction setAnimationDuration:AnimationDuration];
+                [CATransaction setAnimationDuration:kAnimationDuration];
                 _arrowImage.hidden = NO;
                 _arrowImage.transform = (_style == ALPullViewStylePullDown) ? CATransform3DIdentity : CATransform3DMakeRotation((M_PI/180) * 180.0f, 0, 0, 1);
                 [CATransaction commit];
@@ -129,7 +129,7 @@ typedef NS_ENUM(NSInteger, ALPullState) {
             _statusLabel.text = NSLocalizedString(@"release to refresh", @"");
             [_indicator stopAnimating];
             [CATransaction begin];
-            [CATransaction setAnimationDuration:AnimationDuration];
+            [CATransaction setAnimationDuration:kAnimationDuration];
             _arrowImage.transform = (_style == ALPullViewStylePullDown) ? CATransform3DMakeRotation((M_PI/180) * 180.0f, 0, 0, 1) : CATransform3DIdentity;
             [CATransaction commit];
            break;
@@ -144,7 +144,7 @@ typedef NS_ENUM(NSInteger, ALPullState) {
 - (void)setLastUpdatedLabelText
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *lastTime = (_style == ALPullViewStylePullDown) ? [defaults valueForKey:LastPullDownKey] : [defaults valueForKey:LastPullingUpKey];
+    NSString *lastTime = (_style == ALPullViewStylePullDown) ? [defaults valueForKey:kLastPullDownKey] : [defaults valueForKey:kLastPullingUpKey];
     if (lastTime) {
         NSString *nowTime = [[self commonDateFormatter] stringFromDate:[NSDate date]];
         if ([[lastTime substringToIndex:10] isEqualToString:[nowTime substringToIndex:10]]) {
@@ -242,7 +242,7 @@ typedef NS_ENUM(NSInteger, ALPullState) {
 {
     NSString *loadingDate = [[self commonDateFormatter] stringFromDate:[NSDate date]];
     loadingDate = [NSString stringWithFormat:@"%@", loadingDate];
-    [[NSUserDefaults standardUserDefaults] setObject:loadingDate forKey:(_style == ALPullViewStylePullDown) ? LastPullDownKey : LastPullingUpKey];
+    [[NSUserDefaults standardUserDefaults] setObject:loadingDate forKey:(_style == ALPullViewStylePullDown) ? kLastPullDownKey : kLastPullingUpKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 

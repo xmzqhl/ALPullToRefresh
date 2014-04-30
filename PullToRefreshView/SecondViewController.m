@@ -76,11 +76,12 @@ NSInteger DeviceSystemVersion()
     [self.view addSubview:_tableView];
     [_tableView reloadData];
     
-    _ALPullDownView = [[ALPullToRefreshView alloc] initWithFrame:CGRectMake(0, -_tableView.frame.size.height, _tableView.frame.size.width, _tableView.frame.size.height) imageName:@"grayArrow.png" textColor:[UIColor blackColor] viewStyle:ALPullViewStylePullDown];
+    _ALPullDownView = [[ALPullToRefreshView alloc] initWithFrame:CGRectMake(0, -CGRectGetHeight(_tableView.frame), CGRectGetWidth(_tableView.frame), CGRectGetHeight(_tableView.frame)) imageName:@"grayArrow.png" textColor:[UIColor blackColor] viewStyle:ALViewStylePullDown];
     _ALPullDownView.delegate = self;
+//    _ALPullDownView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     [_tableView addSubview:_ALPullDownView];
     
-    _ALPullUpView = [[ALPullToRefreshView alloc] initWithFrame:CGRectMake(0, _tableView.contentSize.height, CGRectGetWidth(_tableView.frame), CGRectGetHeight(_tableView.frame)) imageName:@"grayArrow.png" textColor:nil viewStyle:ALPullViewStylePullUp];
+    _ALPullUpView = [[ALPullToRefreshView alloc] initWithFrame:CGRectMake(0, _tableView.contentSize.height, CGRectGetWidth(_tableView.frame), CGRectGetHeight(_tableView.frame)) imageName:@"grayArrow.png" textColor:nil viewStyle:ALViewStylePullUp];
     _ALPullUpView.delegate = self;
     [_tableView addSubview:_ALPullUpView];
 }

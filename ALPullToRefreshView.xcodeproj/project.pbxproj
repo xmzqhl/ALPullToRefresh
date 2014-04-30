@@ -104,8 +104,8 @@
 		21E1407718CD8F1100EDCFD3 = {
 			isa = PBXGroup;
 			children = (
-				21E1408918CD8F1100EDCFD3 /* PullToRefreshView */,
-				21E140A218CD8F1100EDCFD3 /* PullToRefreshViewTests */,
+				21E1408918CD8F1100EDCFD3 /* ALPullToRefreshView */,
+				21E140A218CD8F1100EDCFD3 /* ALPullToRefreshViewTests */,
 				21E1408218CD8F1100EDCFD3 /* Frameworks */,
 				21E1408118CD8F1100EDCFD3 /* Products */,
 			);
@@ -131,7 +131,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		21E1408918CD8F1100EDCFD3 /* PullToRefreshView */ = {
+		21E1408918CD8F1100EDCFD3 /* ALPullToRefreshView */ = {
 			isa = PBXGroup;
 			children = (
 				21E1409218CD8F1100EDCFD3 /* AppDelegate.h */,
@@ -145,6 +145,7 @@
 				21E1409518CD8F1100EDCFD3 /* Images.xcassets */,
 				21E1408A18CD8F1100EDCFD3 /* Supporting Files */,
 			);
+			name = ALPullToRefreshView;
 			path = PullToRefreshView;
 			sourceTree = "<group>";
 		};
@@ -159,12 +160,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		21E140A218CD8F1100EDCFD3 /* PullToRefreshViewTests */ = {
+		21E140A218CD8F1100EDCFD3 /* ALPullToRefreshViewTests */ = {
 			isa = PBXGroup;
 			children = (
 				21E140A818CD8F1100EDCFD3 /* PullToRefreshViewTests.m */,
 				21E140A318CD8F1100EDCFD3 /* Supporting Files */,
 			);
+			name = ALPullToRefreshViewTests;
 			path = PullToRefreshViewTests;
 			sourceTree = "<group>";
 		};

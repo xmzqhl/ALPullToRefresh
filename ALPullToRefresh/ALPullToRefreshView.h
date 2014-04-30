@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, ALPullViewStyle) {
-    ALPullViewStylePullDown, /**< 下拉刷新*/
-    ALPullViewStylePullUp,   /**< 上提更多*/
+    ALViewStylePullDown, /**< 下拉刷新*/
+    ALViewStylePullUp,   /**< 上提更多*/
 };
 
 @protocol ALPullToRefreshViewDelegate;

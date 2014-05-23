@@ -9,7 +9,7 @@ ALPullToRefresh
 在demo中已经演示了，详情可以参见demo中的SecondViewController。
 
 ###Usage:
-```Objective-C:n
+``` objective-c
 	_ALPullDownView = [[ALPullToRefreshView alloc] initWithFrame:CGRectMake(0, -CGRectGetHeight(_tableView.frame), CGRectGetWidth(_tableView.frame), CGRectGetHeight(_tableView.frame)) 
 	  												   imageName:@"grayArrow.png" 
 	  												   textColor:[UIColor blackColor] 

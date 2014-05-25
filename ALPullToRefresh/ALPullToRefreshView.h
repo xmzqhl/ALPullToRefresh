@@ -44,6 +44,7 @@ typedef NS_ENUM(NSInteger, ALPullViewStyle) {
  @brief 实现UIScrollView的scrollViewDidEndDragging:willDecelerate:方法来调用此方法，通知试图用户手指已经离开屏幕
  */
 - (void)ALPullToRefreshViewDidEndDrag:(UIScrollView *)scrollView NS_AVAILABLE_IOS(5_0);
+
 @end
 
 
